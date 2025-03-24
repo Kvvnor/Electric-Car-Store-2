@@ -3,3 +3,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+    'sidebar header'
+    'sidebar main'
+    'footer main';
+}
