@@ -34,7 +34,7 @@
 
   } */
 
-  /* .sidebar-title i {
+/* .sidebar-title i {
     margin-right: 8px;
     font-size: 1.4rem;
   } */
@@ -47,7 +47,7 @@
     gap: 10px;
   } */
 
-  /* .menu-bars {
+/* .menu-bars {
     display: none;
   } */
 
@@ -122,15 +122,15 @@ main .pagination {
 
 /* Grid-template-areas */
 
-  .grid-container {
+.grid-container {
     display: grid;
-    grid-template-columns: 250px auto; 
-    grid-template-rows: auto 1fr auto; 
-    grid-template-areas: 
+    grid-template-columns: 250px auto;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
         "sidebar header"
         "sidebar main"
-        "footer main"; 
-    min-height: 100vh; 
+        "footer main";
+    min-height: 100vh;
     width: 100%;
 }
 
@@ -138,7 +138,7 @@ main .pagination {
 
 .sidebar {
     grid-area: sidebar;
-    background-color: #222; 
+    background-color: #023859;
     padding: 1rem;
     color: white;
 }
@@ -147,16 +147,26 @@ main .pagination {
 
 .header {
     grid-area: header;
-    background-color: #444; 
+    background-color: #1A2E40;
     padding: 1rem;
     text-align: center;
+}
+
+.filter h3 {
+    color: white;
+    margin: 10px;
+}
+
+.header .select {
+    width: 500px;
+    height: 30px;
 }
 
 /* Main */
 
 .main {
     grid-area: main;
-    background-color: #c46b06; 
+    background-color: #F2CCB6;
     padding: 1.5rem;
     overflow-y: auto;
 }
@@ -166,14 +176,13 @@ main .pagination {
 .main .card-container {
     grid-area: main;
     display: grid;
-    grid-template-areas: 
-    'cards'
-    'pagination';
+    grid-template-areas:
+        'cards'
+        'pagination';
 }
 
 .main .card-container {
     grid-area: cards;
-    /* background-color: antiquewhite; */
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
@@ -189,34 +198,71 @@ main .pagination {
 .main .card {
     display: flex;
     flex-direction: column;
-    display: flex;
-    flex-direction: column;
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 1rem;
     margin: 1rem;
     box-shadow: 0px 1px 7px rgb(76, 76, 76);
     gap: 6px;
+    background-color: #F2EFDF;
+    text-align: center;
 }
 
 .main .card img {
     width: 100%;
+}
+
+.card h3 {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0.4rem;
+}
+
+.card .description {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
 }
+
+.card .value {
+    font-weight: bold;
+    font-size: 1.3rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #330099;
+    margin: 10px;
+
+}
+
 
 /* Pagination */
 
 .pagination {
-    background-color: #00992b;
+    margin-top: 2rem;
+    background-color: #F2CCB6;
     text-align: center;
     padding: 1rem;
+}
+
+.pagination a {
+    text-decoration: none;
+    padding: 12px;
+    margin: 4px;
+    border: 1px solid #ddd;
+    box-shadow: 1px 0px 7px;
+    border-radius: 4px;
+    font-size: larger;
+    color: black;
+    background-color: white;
+}
+
+.pagination .number-active {
+    background-color: blue;
+    border-color: blue;
 }
 
 /* Footer */
 
 .footer {
     grid-area: footer;
-    background-color: #125883; 
+    background-color: #125883;
     padding: 1rem;
     text-align: center;
     color: white;
