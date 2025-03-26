@@ -62,13 +62,13 @@
 } */
 
 
-main .card-container {
+/* main .card-container {
     grid-area: main;
     display: grid;
     grid-template-areas: 
     'cards'
     'pagination';
-}
+} */
 
 /* main .card-container {
     grid-area: cards;
@@ -120,6 +120,8 @@ main .pagination {
   */
 
 
+/* Grid-template-areas */
+
   .grid-container {
     display: grid;
     grid-template-columns: 250px auto; 
@@ -128,8 +130,11 @@ main .pagination {
         "sidebar header"
         "sidebar main"
         "footer main"; 
-    height: 100vh; 
+    min-height: 100vh; 
+    width: 100%;
 }
+
+/* Sidebar */
 
 .sidebar {
     grid-area: sidebar;
@@ -138,6 +143,8 @@ main .pagination {
     color: white;
 }
 
+/* Header */
+
 .header {
     grid-area: header;
     background-color: #444; 
@@ -145,15 +152,67 @@ main .pagination {
     text-align: center;
 }
 
+/* Main */
+
 .main {
     grid-area: main;
     background-color: #c46b06; 
     padding: 1.5rem;
+    overflow-y: auto;
 }
+
+/* Main areas */
+
+.main .card-container {
+    grid-area: main;
+    display: grid;
+    grid-template-areas: 
+    'cards'
+    'pagination';
+}
+
+.main .card-container {
+    grid-area: cards;
+    /* background-color: antiquewhite; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.main .card-container {
+    grid-area: pagination;
+}
+
+
+/* Cards */
+
+.main .card {
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 1rem;
+    box-shadow: 0px 1px 7px rgb(76, 76, 76);
+    gap: 6px;
+}
+
+.main .card img {
+    width: 100%;
+
+}
+
+/* Pagination */
 
 .pagination {
     background-color: #00992b;
+    text-align: center;
+    padding: 1rem;
 }
+
+/* Footer */
 
 .footer {
     grid-area: footer;
