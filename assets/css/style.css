@@ -162,3 +162,19 @@ body {
     text-align: center;
     color: white;
 }
+
+.footer .social-media {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    gap: 1rem;
+}
+
+.social-media i {
+    margin: 6px;
+    color: white;
+}
+
+.footer-text {
+    margin: 12px;
+}
