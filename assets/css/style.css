@@ -31,6 +31,40 @@ body {
     background-color: #023859;
     padding: 1rem;
     color: white;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar-title {
+    margin: 2rem;
+    font-size: 1.2rem;
+}
+
+.menu {
+    padding: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu li {
+    padding: 2rem;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+}
+
+.menu a:hover {
+    color: #a9a8a8;
+    transition: 0.3s ease-out;
+}
+
+.menu-bars {
+    display: none;
 }
 
 /* Header */
@@ -96,6 +130,13 @@ body {
     gap: 6px;
     background-color: white;
     text-align: center;
+    transition: transform 0.3s ease;
+    transform: translateY(-5px);
+}
+
+.card:hover {
+    transition: transform 0.3s ease;
+    transform: translateY(5px);
 }
 
 .main .card img {
@@ -125,6 +166,13 @@ body {
     border-color: #ddd;
     background-color: #fff;
     font-size: 20px;
+    transition: transform 0.3s ease;
+    transform: translateX(-5px);
+}
+
+.see-more:hover {
+    transition: transform 0.3s ease;
+    transform: translateX(5px);
 }
 
 /* Pagination */
@@ -146,6 +194,11 @@ body {
     font-size: larger;
     color: black;
     background-color: white;
+}
+
+.pagination a:hover {
+    color: aqua;
+    transition: 0.2s;
 }
 
 .pagination .number-active {
@@ -173,6 +226,11 @@ body {
 .social-media i {
     margin: 6px;
     color: white;
+}
+
+.social-media i:hover {
+    color: #6d6d6d;
+    transition: 0.3s ease-out;
 }
 
 .footer-text {
